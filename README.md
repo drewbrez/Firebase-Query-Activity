@@ -1,6 +1,5 @@
 # Firebase-Query-Activity
 
-Link to Repo: 
+Link to Repo: https://github.com/drewbrez/Firebase-Query-Activity.git
 
-Note:The app.js and index.html files are within the Firestore Query Activity Folder on Github
-
+Note: app.js and index.html files with the necessary code is within the Firestore Query Activity folder in Github
