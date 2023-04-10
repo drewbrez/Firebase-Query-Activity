@@ -191,6 +191,11 @@ db.collection("teams")
   .doc("RealMadrid")
   .update({
     scorers: firebase.firestore.FieldValue.arrayRemove("Hazard"),
+  });
+
+db.collection("teams")
+  .doc("RealMadrid")
+  .update({
     scorers: firebase.firestore.FieldValue.arrayUnion("Crispo"),
   });
 
@@ -199,9 +204,13 @@ db.collection("teams")
   .doc("Barcelona")
   .update({
     scorers: firebase.firestore.FieldValue.arrayRemove("Puyol"),
-    scorers: firebase.firestore.FieldValue.arrayUnion("Deco"),
   });
 
+db.collection("teams")
+  .doc("Barcelona")
+  .update({
+    scorers: firebase.firestore.FieldValue.arrayUnion("Deco"),
+  });
 // Part B
 
 // Part C
