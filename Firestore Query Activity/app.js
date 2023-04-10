@@ -65,3 +65,107 @@ db.collection("teams").doc("ManCity").set(ManCity);
 db.collection("teams").doc("Brazil").set(Brazil);
 db.collection("teams").doc("Argentina").set(Argentina);
 db.collection("teams").doc("Atletico").set(Atletico);
+
+// Task 2: Querying Data
+
+// Q1 - Show all teams in Spain
+
+db.collection("teams")
+  .where("country", "==", "Spain")
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q2 - Show all teams in Madrid, Spain
+
+db.collection("teams")
+  .where("city", "==", "Madrid")
+  .where("country", "==", "Spain")
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q3 - Show all national teams
+
+db.collection("teams")
+  .where("city", "==", "NA")
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q4 - Show all teams that are not in Spain
+
+db.collection("teams")
+  .where("country", "!=", "Spain")
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q5 - Show all teams that are not in Spain or England
+
+db.collection("teams")
+  .where("country", "not-in", ["Spain", "England"])
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q6 - Show all teams in Spain with more than 700M fans
+
+db.collection("teams")
+  .where("country", "==", "Spain")
+  .where("fans", ">", 700)
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q7 - Show all teams with a number of fans in the range of 500M and 600M
+
+db.collection("teams")
+  .where("fans", ">=", 500)
+  .where("fans", "<=", 600)
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q8 - Show all teams where Ronaldo is a top scorer
+
+db.collection("teams")
+  .where("scorers", "array-contains", "Ronaldo")
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
+
+// Q9 - Show all teams where Ronaldo, Maradona, or Messi is a top scorer
+
+db.collection("teams")
+  .where("scorers", "array-contains-any", ["Ronaldo", "Maradona", "Messi"])
+  .get()
+  .then((query) => {
+    query.forEach((doc) => {
+      console.log(doc.data().name);
+    });
+  });
