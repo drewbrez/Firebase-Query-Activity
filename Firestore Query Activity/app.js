@@ -227,5 +227,11 @@ db.collection("teams")
   });
 
 // Part C
+db.collection("teams").doc("RealMadrid").update({
+  "color.away": "Purple",
+});
 
 // Part D
+db.collection("teams").doc("Barcelona").update({
+  "color.away": "Pink",
+});
