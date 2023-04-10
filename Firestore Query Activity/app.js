@@ -169,3 +169,41 @@ db.collection("teams")
       document.querySelector("#Q9").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
+
+// Task 3: Updating Data
+
+// Part A
+
+// Update fans/name for Real Madrid
+db.collection("teams").doc("RealMadrid").update({
+  name: "Real Madrid FC",
+  fans: 811,
+});
+
+// Update fans/name for Barcelona
+db.collection("teams").doc("Barcelona").update({
+  name: "FC Barcelona",
+  fans: 747,
+});
+
+// Update top scorers for Real Madrid
+db.collection("teams")
+  .doc("RealMadrid")
+  .update({
+    scorers: firebase.firestore.FieldValue.arrayRemove("Hazard"),
+    scorers: firebase.firestore.FieldValue.arrayUnion("Crispo"),
+  });
+
+// Update top scorers for Barcelona
+db.collection("teams")
+  .doc("Barcelona")
+  .update({
+    scorers: firebase.firestore.FieldValue.arrayRemove("Puyol"),
+    scorers: firebase.firestore.FieldValue.arrayUnion("Deco"),
+  });
+
+// Part B
+
+// Part C
+
+// Part D
