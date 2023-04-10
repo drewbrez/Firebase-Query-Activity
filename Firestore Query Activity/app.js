@@ -213,24 +213,18 @@ db.collection("teams")
   });
 
 // Part B
-let color = {
-  home: {
-    RealMadrid: "White",
-    Barcelona: "Red",
-  },
-  away: {
-    RealMadrid: "Black",
-    Barcelona: "Gold",
-  },
-};
 
-db.collection("teams").doc("RealMadrid").update({
-  color: color,
-});
+db.collection("teams")
+  .doc("RealMadrid")
+  .add({
+    color: { home: "White", away: "Black" },
+  });
 
-db.collection("teams").doc("Barcelona").update({
-  color: color,
-});
+db.collection("teams")
+  .doc("Barcelona")
+  .add({
+    color: { home: "Red", away: "Gold" },
+  });
 
 // Part C
 
