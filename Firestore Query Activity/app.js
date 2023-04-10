@@ -75,7 +75,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q1").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q1").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -87,7 +87,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q2").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q2").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -98,7 +98,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q3").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q3").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -109,7 +109,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q4").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q4").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -120,7 +120,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q5").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q5").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -132,7 +132,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q6").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q6").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -144,7 +144,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q7").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q7").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -155,7 +155,7 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q8").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q8").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
 
@@ -166,6 +166,6 @@ db.collection("teams")
   .get()
   .then((query) => {
     query.forEach((doc) => {
-      document.querySelector("Q9").innerHTML += `<p>${doc.data().name}</p>`;
+      document.querySelector("#Q9").innerHTML += `<p>${doc.data().name}</p>`;
     });
   });
