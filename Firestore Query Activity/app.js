@@ -211,7 +211,26 @@ db.collection("teams")
   .update({
     scorers: firebase.firestore.FieldValue.arrayUnion("Deco"),
   });
+
 // Part B
+let color = {
+  home: {
+    RealMadrid: "White",
+    Barcelona: "Red",
+  },
+  away: {
+    RealMadrid: "Black",
+    Barcelona: "Gold",
+  },
+};
+
+db.collection("teams").doc("RealMadrid").update({
+  color: color,
+});
+
+db.collection("teams").doc("Barcelona").update({
+  color: color,
+});
 
 // Part C
 
