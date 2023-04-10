@@ -216,13 +216,13 @@ db.collection("teams")
 
 db.collection("teams")
   .doc("RealMadrid")
-  .add({
+  .update({
     color: { home: "White", away: "Black" },
   });
 
 db.collection("teams")
   .doc("Barcelona")
-  .add({
+  .update({
     color: { home: "Red", away: "Gold" },
   });
 
